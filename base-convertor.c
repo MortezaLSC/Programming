@@ -1,6 +1,6 @@
 //This program is written by "MortezaLSC" on 5, May 2013 at 10:30 AM
 //Gets a number in current base and converts it to desiered base.
-//Compiling: gcc -o base base.c -lm
+//Compiling: gcc -o base-convertor base-convertor.c -lm
 
 #include <stdio.h>
 #include <math.h>
