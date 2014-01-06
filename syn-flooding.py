@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#This scripts is written by "MortezaLSC" on Sunday, 5 2014 at 10:35 PM
+#This script is written by "MortezaLSC" on Sunday, 5 2014 at 10:35 PM
 #It does syn flooding attack for testing the firewall
 
 import sys
