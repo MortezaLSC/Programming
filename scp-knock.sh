@@ -9,6 +9,6 @@ echo "**********************************************************************"
 
 read -p "Enter your values: " DIR KNOCK SSH USER IPADDRESS
 telnet $IPADDRESS $KNOCK 1>/dev/null 2>&1 &
-pkill -KILL $!
+pkill $!
 scp -P $SSH -r $DIR $USER@$IPADDRESS:/tmp
 exit 0
