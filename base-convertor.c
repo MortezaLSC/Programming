@@ -6,7 +6,7 @@
 #include<math.h>
 
 int a,b;
-void ali(void){
+void base(void){
   int i=-1,j,adad2[100];
   char adad1[100],c;
   long int num1=0,num2=0;
@@ -57,7 +57,7 @@ void main(void) {
   scanf("%d",&a);
   printf("Enter desired base: ");
   scanf("%d",&b);
-  ali();
+  base();
   getchar();
 }
                        
