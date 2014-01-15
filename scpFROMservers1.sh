@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 #This script is written by "MortezaLSC" on Tuesday, 14 January 2014 10:55 PM
 #It scps file from some servers to my machine.
+#Usage: ./scpFROMservers1.sh | awk '{sum += $1} END {print sum}' , inorder to calculate sum of all lines.
 
 while read ip dir; do
      sshpass -fpass1.txt scp -r root@$ip:/tmp/dir/test /user/path/to/$dir/
-     wc -l /user/path/to/$dir/test
+     wc -l /user/path/to/$dir/test #| awk '{sum += $1} END {print sum}'
 done <<____HERE
     1.1.1.1  1
     2.2.2.2  2
@@ -14,7 +15,7 @@ ____HERE
 
 while read ip dir; do
     sshpass -fpass2.txt scp -r root@$ip:/tmp/dir/test /user/path/to/$dir/
-    wc -l /user/path/to/$dir/test
+    wc -l /user/path/to/$dir/test #| awk '{sum += $1} END {print sum}'
 done <<____HERE
     5.5.5.5  5
     6.6.6.6  6
