@@ -4,6 +4,7 @@
 
 while read ip dir; do
      sshpass -fpass1.txt scp -r root@$ip:/tmp/dir/test /user/path/to/$dir/
+     wc -l /user/path/to/$dir/test
 done <<____HERE
     1.1.1.1  1
     2.2.2.2  2
@@ -13,6 +14,7 @@ ____HERE
 
 while read ip dir; do
     sshpass -fpass2.txt scp -r root@$ip:/tmp/dir/test /user/path/to/$dir/
+    wc -l /user/path/to/$dir/test
 done <<____HERE
     5.5.5.5  5
     6.6.6.6  6
