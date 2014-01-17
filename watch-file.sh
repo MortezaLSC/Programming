@@ -1,7 +1,7 @@
 #!/bin/bash
 #This script is written by "MortezaLSC" on Teusday, 29 January 2013 at 5:05 PM
 #Short description: This script gives a logfile usually from /var/log/YourLogFile and then check if it is modified or not.
-After that it shows you the modifications.
+#After that it shows you the modifications.
 
 GAP=10     #How long to wait
 LOGFILE=$1 #File to log to
