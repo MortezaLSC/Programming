@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 #This scripts is written by "MortezaLSC" on Monday, 20 January 2014 at 1:00 PM
 #Usage: ./ssl-conf <<EOF
-#1:     > <CountryNmane>
-#2:     > <StateName>
-#3:     > <LocalityName>
-#4:     > <OrganizationName>
-#5:     > <OrganizationUnitName>
-#6:     > <CommonName>
-#7:     > <EmailAddress>
-#8:     > <ChallengePassword>
-#9:     > <CompanyName>
+#1:     > <CountryNmane>           US
+#2:     > <StateName>              something
+#3:     > <LocalityName>           newyork
+#4:     > <OrganizationName>       test
+#5:     > <OrganizationUnitName>   test1
+#6:     > <CommonName>             test2
+#7:     > <EmailAddress>           test3
+#8:     > <ChallengePassword>      challengepassword
+#9:     > <CompanyName>            test4
 #       >EOF
 #
 
