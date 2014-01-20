@@ -31,6 +31,6 @@ cp ca.csr /etc/pki/tls/private/ca.csr
 echo ServerName localhost >> $HTTPPATH
 
 sed -i 's|SSLCertificateFile /etc/pki/tls/certs/localhost.crt|SSLCertificateFile /etc/pki/tls/certs/ca.crt|' $SSLPATH
-sed -i 's|SSLCertificateKeyFile /etc/pki/tls/private/localhost.key|SSLCertificateFile /etc/pki/tls/private/ca.key|' $SSLPATH
+sed -i 's|SSLCertificateKeyFile /etc/pki/tls/private/localhost.key|SSLCertificateKeyFile /etc/pki/tls/private/ca.key|' $SSLPATH
 
 service httpd restart
