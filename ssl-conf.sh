@@ -15,6 +15,8 @@
 
 
 SSLPATH="/etc/httpd/conf.d/ssl.conf"
+HTTPPATH="/etc/httpd/conf/httpd.conf"
+
 
 yum update -y
 yum install httpd curl php mod_ssl openssl -y
@@ -25,6 +27,8 @@ openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt
 cp ca.crt /etc/pki/tls/certs
 cp ca.key /etc/pki/tls/private/ca.key
 cp ca.csr /etc/pki/tls/private/ca.csr
+
+cat ServerName localhost >> $HTTPPATH
 
 sed -i 's|SSLCertificateFile /etc/pki/tls/certs/localhost.crt|SSLCertificateFile /etc/pki/tls/certs/ca.crt|' $SSLPATH
 sed -i 's|SSLCertificateKeyFile /etc/pki/tls/private/localhost.key|SSLCertificateFile /etc/pki/tls/private/ca.key|' $SSLPATH
