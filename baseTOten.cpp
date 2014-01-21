@@ -63,7 +63,6 @@ int base8to10(int num){
 int main(){
   int num,nums,a ,b,ans;
 
-  //  cout << "What base you want to convert?\n"
   cout << "*******************************************************\n"
        << "*            BASE TWO:                2               *\n"
        << "*            BASE EIGHT:              8               *\n"
