@@ -1,10 +1,8 @@
 //This program is written by "MortezaLSC" on Tuesday, 21 January 2014 at 11:25 PM
 
 #include <iostream>
-#include <typeinfo>
 
 using namespace std;
-
 
 int base2toten(int nums);
 int base8toten(int num);
