@@ -1,7 +1,7 @@
 //This program is written by "MortezaLSC" on Tuesday, 21 January 2014 at 11:25 PM
 
 #include <iostream>
-
+#include <iomanip>
 using namespace std;
 
 int base2toten(int nums);
@@ -56,12 +56,15 @@ int base8to10(int num){
     flag8=1;
 
   cout << "Enter num base 8: ";
+  //std::cin >> std::oct >> base8;
+  //std::cin >> base8;
   cin >> base8;
 
   digit = base8;
 
   while(digit){
     part = digit % 10;
+
     if(part > 7 || base8 < 0){
       cout << "The number you have entered is not base 8 !!!\n";
       flag8=0;
@@ -86,12 +89,13 @@ int main(){
   int num,nums,a ,b,ans;
 
   //  cout << "What base you want to convert?\n"
-  cout << "*******************************************************\n"
-       << "*            BASE TWO:                2               *\n"
-       << "*            BASE EIGHT:              8               *\n"
-       << "*            BOTH BASE TWO AND EIGHT: 28              *\n"
-       << "*            BOTH BASE EIGHT AND TWO: 82              *\n"
-       << "*******************************************************\n";
+  cout << "****************************************************************\n"
+       << "*                 BASE TWO:                2                   *\n"
+       << "*                 BASE EIGHT:              8                   *\n"
+       << "*                 BOTH BASE TWO AND EIGHT: 28                  *\n"
+       << "*                 BOTH BASE EIGHT AND TWO: 82                  *\n"
+       << "****************************************************************\n"
+       << "NOTE: IF YOU ENTER FLOAT NUMBER, PROGRAM WOULD CAST IT TO INEGER\n";
 
   cout << "What base you want to convert? ";
   cin >> ans;
