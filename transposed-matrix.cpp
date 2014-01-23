@@ -1,10 +1,10 @@
 //This program is written by "MortezaLSC" on Thursday, 23 January 2014 at 11:43 PM
-//UNDER CONSTRUCTION :)
+
 #include <iostream>
 using namespace std;
 
 int main(){
-  int i, j, n=1, m=2;
+  int i, j, n=100, m=200;
   int a[n][m], b[m][n];
   
   cout << "----                           ----\n"
