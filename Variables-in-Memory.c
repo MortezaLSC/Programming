@@ -3,18 +3,23 @@
 int main(){
   double x, y;
   int a, b, c;
+  int *p;
+  .
+  .
+  .
+    p = &c;  // It means p = 0x0012ff64  ,,, we see &p = 0x0012ff60
   
   .
   .
   .
   .
 
-}
+      }
 
 sizeof(int)    = 4  ====> It means if you enter integer variables, addresses would increase 4 bytes by 4 bytes
 sizeof(double) = 8  ====> It means if you enter double variables, addresses would increase 8 bytes by 8 bytes
 
-Then we have:
+  Then we have:
                                                           ------------
                                                     a    | 0x0012ff6c |
                                                           ------------
@@ -31,16 +36,28 @@ Then we have:
                                                     y    | 0x0012ff70 |
                                                           ------------
                                                           
-More detailed in graphical mode:
-                              IN MEMORY:(whole memory)
-                              LE = Little Endian
-                              BE = Big Endian
+  More detailed in graphical mode:
+  IN MEMORY:(whole memory)
+  LE = Little Endian  (INTEL)
+  BE = Big Endian     (MIPS)
                                                           ------------------
                                             0x00000000   |                  | ?
                                                           ------------------
                                                 .                .
                                                 .                .
                                                 .                .
+                                                          ------------------
+                                            0x0012ff60   |  64(LE)  00(BE)  | 
+                                                          ------------------
+                                                          ------------------
+                                            0x0012ff61   |  ff(LE)  12(BE)  | 
+                                                          ------------------
+                                                          ------------------
+                                            0x0012ff62   |  12(LE)  ff(BE)  | 
+                                                          ------------------
+                                                          ------------------
+                                            0x0012ff63   |  00(LE)  64(BE)  | 
+                                                          ------------------
                                                     
                                                           -----------------
                                             0x0012ff64   | 00(LE)   00(BE) |  c              if c = 256 (base10)
@@ -52,7 +69,7 @@ More detailed in graphical mode:
                                             0x0012ff66   | 00(LE)   01(BE) |  c
                                                           -----------------
                                                           -----------------
-                                            0x0012ff67   | 00(LE)   00(BE) |  c
+                                            0x0012ff67   | 00(LE)   00(BE) |  c 
                                                           -----------------
                                                           -----------------
                                             0x0012ff68   |                 |  b
