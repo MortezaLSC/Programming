@@ -20,21 +20,21 @@ sizeof(int)    = 4  ====> It means if you enter integer variables, addresses wou
 sizeof(double) = 8  ====> It means if you enter double variables, addresses would increase 8 bytes by 8 bytes
 
   Then we have:
-                                                          ------------
-                                                    a    | 0x0012ff6c |
-                                                          ------------
-                                                          ------------
-                                                    b    | 0x0012ff68 |
-                                                          ------------
-                                                          ------------
-                                                    c    | 0x0012ff64 |
-                a is 4 bytes after b                      ------------
-                                                          ------------
-                                                    x    | 0x0012ff78 |
-                x is 8 bytes after y                     ------------
-                                                          ------------
-                                                    y    | 0x0012ff70 |
-                                                          ------------
+                                                          ------------------
+                                                    a    | 0x0012ff6c       |
+                                                          ------------------
+                                                          ------------------
+                                                    b    | 0x0012ff68       |
+                                                          ------------------
+                                                          ------------------
+                                                    c    | 0x0012ff64       |
+                a is 4 bytes after b                      ------------------
+                                                          ------------------
+                                                    x    | 0x0012ff78       |
+                x is 8 bytes after y                      ------------------
+                                                          ------------------
+                                                    y    | 0x0012ff70       |
+                                                          ------------------
                                                           
   More detailed in graphical mode:
   IN MEMORY:(whole memory)
