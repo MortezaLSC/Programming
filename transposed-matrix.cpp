@@ -8,15 +8,18 @@ int main(){
   int a[n][m], b[m][n];
   
   cout << "----                           ----\n"
-       << "| a[1,1]   a[1,2]   . . .  a[1,n] |\n"
-       << "| a[2,1]   a[2,2]   . . .  a[2,n] |\n"
+       << "| a[1,1]   a[1,2]   . . .  a[1,m] |\n"
+       << "| a[2,1]   a[2,2]   . . .  a[2,m] |\n"
        << "|  .        .    .          .     |\n"
        << "|  .        .      .        .     |\n"
        << "|  .        .        .      .     |\n"
-       << "| a[m,1]   a[m,2]   . . .  a[m,n] |\n"
+       << "| a[n,1]   a[n,2]   . . .  a[n,m] |\n"
        << "----                           ----\n";
-  
-  cout << "ENTER MATRIX nXm ";
+  cout << "n ==> NUMBER OF ROWS" << endl
+       << "m ==> NUMBER OF COLUMNS" << endl;
+  cout << "MATRIX nXm";
+
+  cout << "ENTER n & m: ";
   cin >> n >> m;
 
   cout << "ENTER MATRIX VALUES:\n";
