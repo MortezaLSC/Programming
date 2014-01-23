@@ -8,7 +8,10 @@ int main(){
   .
   .
     p = &c;  // It means p = 0x0012ff64  ,,, we see &p = 0x0012ff60
-  
+    a = c    // a = 256
+    a = *p  //  at first p is address of c, it goes to memory and put values of p indide eachother
+            //  which is 0x0012ff64 so it points to that address and put the value of that address to a
+            //  so again we have : a = 256
   .
   .
   .
