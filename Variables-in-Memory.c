@@ -46,8 +46,8 @@ More detailed in graphical mode:
                                             0x0012ff64   | 00(LE)   00(BE) |  c              if c = 256 (base10)
                                                           -----------------                     c = 0x00000100
                                                           -----------------
-                                            0x0012ff65   | 01(LE)   00(BE) |  c
-                                                          -----------------
+                                            0x0012ff65   | 01(LE)   00(BE) |  c   0x0012ff64 points to c variable
+                                                          -----------------       0x0012ff64 is a pointer
                                                           -----------------
                                             0x0012ff66   | 00(LE)   01(BE) |  c
                                                           -----------------
