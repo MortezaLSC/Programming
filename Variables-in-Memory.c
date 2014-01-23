@@ -21,19 +21,19 @@ sizeof(double) = 8  ====> It means if you enter double variables, addresses woul
 
   Then we have:
                                                           ------------------
-                                            0x0012ff6c    |                | a
+                                            0x0012ff6c   |                  | a
                                                           ------------------
                                                           ------------------
-                                            0x0012ff68    |                | b
+                                            0x0012ff68   |                  | b
                                                           ------------------
                                                           ------------------
-                                            0x0012ff64    |                | c
+                                            0x0012ff64   |                  | c
                 a is 4 bytes after b                      ------------------
                                                           ------------------
-                                            0x0012ff78    |                | x
+                                            0x0012ff78   |                  | x
                 x is 8 bytes after y                      ------------------
                                                           ------------------
-                                            0x0012ff70    |                | y
+                                            0x0012ff70   |                  | y
                                                           ------------------
                                                           
   More detailed in graphical mode:
