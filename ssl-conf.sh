@@ -39,19 +39,19 @@ sed -i 's|SSLCertificateKeyFile /etc/pki/tls/private/localhost.key|SSLCertificat
 
 /etc/init.d/iptables stop &
 if [ -a /etc/sysconfig/iptables ] && [ $? -eq 0 ]; then
-    echo "iptables stopped successfully...  :)"
+    echo "iptables stopped successfully..."
 
 elif [ ! -a /etc/sysconfig/iptables ]; then
-    echo "iptables service not found...  :|"
+    echo "iptables service not found..."
 
 elif [ -a /etc/sysconfig/iptables ] && [ $? -ne 0 ]; then
-    echo "iptables stopping failed...  :("
+    echo "iptables stopping failed..."
 fi
 
 
 /etc/init.d/httpd restart &
 if [ $? -eq 0 ]; then
-    echo "httpd was restarted successfully...  :)"
+    echo "httpd was restarted successfully..."
 else
-    echo "httpd restarting failed...  :("
+    echo "httpd restarting failed..."
 fi
