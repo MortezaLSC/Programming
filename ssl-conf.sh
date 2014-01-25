@@ -33,5 +33,5 @@ echo ServerName localhost >> $HTTPPATH
 sed -i 's|SSLCertificateFile /etc/pki/tls/certs/localhost.crt|SSLCertificateFile /etc/pki/tls/certs/ca.crt|' $SSLPATH
 sed -i 's|SSLCertificateKeyFile /etc/pki/tls/private/localhost.key|SSLCertificateKeyFile /etc/pki/tls/private/ca.key|' $SSLPATH
 
-service httpd restart
 service iptables stop
+service httpd restart
