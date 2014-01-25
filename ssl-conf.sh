@@ -1,6 +1,6 @@
 #!/bin/bash
 #This scripts is written by "MortezaLSC" on Monday, 20 January 2014 at 1:00 PM
-#It prepeares and installs everything you need to have on your centOS machine.
+#It prepares and installs everything you need to have for SSL on your centOS machine.
 
 #Usage: ./ssl-conf <<EOF
 #0:     What you need to assign        EXAMPLE
