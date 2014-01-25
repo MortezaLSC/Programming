@@ -1,15 +1,19 @@
-#!/usr/bin/env bash
+#!/bin/bash
 #This scripts is written by "MortezaLSC" on Monday, 20 January 2014 at 1:00 PM
+#It prepeares and installs everything you need to have on your centOS machine.
+
 #Usage: ./ssl-conf <<EOF
-#1:     > <CountryNmane>           US
-#2:     > <StateName>              something
-#3:     > <LocalityName>           newyork
-#4:     > <OrganizationName>       test
-#5:     > <OrganizationUnitName>   test1
-#6:     > <CommonName>             test2
-#7:     > <EmailAddress>           test3
-#8:     > <ChallengePassword>      challengepassword
-#9:     > <CompanyName>            test4
+#0:     What you need to assign        EXAMPLE
+###     =======================       ===========
+#1:     > <CountryNmane>                US
+#2:     > <StateName>                   something
+#3:     > <LocalityName>                newyork
+#4:     > <OrganizationName>            test
+#5:     > <OrganizationUnitName>        test1
+#6:     > <CommonName>                  test2
+#7:     > <EmailAddress>                test3
+#8:     > <ChallengePassword>           challengepassword
+#9:     > <CompanyName>                 test4
 #       >EOF
 #
 
@@ -33,5 +37,8 @@ echo ServerName localhost >> $HTTPPATH
 sed -i 's|SSLCertificateFile /etc/pki/tls/certs/localhost.crt|SSLCertificateFile /etc/pki/tls/certs/ca.crt|' $SSLPATH
 sed -i 's|SSLCertificateKeyFile /etc/pki/tls/private/localhost.key|SSLCertificateKeyFile /etc/pki/tls/private/ca.key|' $SSLPATH
 
-service iptables stop
-service httpd restart
+/etc/init.d/iptables stop &
+echo IPTABLES was stopped successfully
+
+/etc/init.d/httpd restart &
+echo HTTPD was restarted successfully
