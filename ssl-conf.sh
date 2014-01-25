@@ -38,13 +38,13 @@ sed -i 's|SSLCertificateFile /etc/pki/tls/certs/localhost.crt|SSLCertificateFile
 sed -i 's|SSLCertificateKeyFile /etc/pki/tls/private/localhost.key|SSLCertificateKeyFile /etc/pki/tls/private/ca.key|' $SSLPATH &
 
 /etc/init.d/iptables stop &
-if [ -f /etc/sysconfig/iptables ] && [ $? -eq 0 ]; then
+if [ -a /etc/sysconfig/iptables ] && [ $? -eq 0 ]; then
     echo "iptables stopped successfully...  :)"
 
-elif [ ! -f /etc/sysconfig/iptables ]; then
+elif [ ! -a /etc/sysconfig/iptables ]; then
     echo "iptables service not found...  :|"
 
-elif [ -f /etc/sysconfig/iptables ] && [ $? -ne 0 ]; then
+elif [ -a /etc/sysconfig/iptables ] && [ $? -ne 0 ]; then
     echo "iptables stopping failed...  :("
 fi
 
