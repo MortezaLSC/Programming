@@ -1,5 +1,4 @@
-#include <iostream>
-using namespace std;
+//This program is written by "MortezaLSC" on Sunday, 26 January 2014 at4:00 pm
 //Write a program to solve this puzzle:
 //Do we have a number that has 5 digits with the following conditions?
 // 1) Sum of all digits is 30
@@ -8,6 +7,8 @@ using namespace std;
 // 4) First digit is 2*(second digit) - 1
 // 5) fourth digit is second digit plus
 
+#include <iostream>
+using namespace std;
 int main(){
   int x1, x2, x3, x4, x5;
   
