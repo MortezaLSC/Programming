@@ -31,27 +31,36 @@ openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt &
 cp ca.crt /etc/pki/tls/certs &
 cp ca.key /etc/pki/tls/private/ca.key &
 cp ca.csr /etc/pki/tls/private/ca.csr &
+echo
 
 echo ServerName localhost >> $HTTPPATH
 
+#Editing SSL configurations
 sed -i 's|SSLCertificateFile /etc/pki/tls/certs/localhost.crt|SSLCertificateFile /etc/pki/tls/certs/ca.crt|' $SSLPATH &
 sed -i 's|SSLCertificateKeyFile /etc/pki/tls/private/localhost.key|SSLCertificateKeyFile /etc/pki/tls/private/ca.key|' $SSLPATH &
 
-/etc/init.d/iptables stop &
-if [ -a /etc/sysconfig/iptables ] && [ $? -eq 0 ]; then
-    echo "iptables stopped successfully..."
-
-elif [ ! -a /etc/sysconfig/iptables ]; then
-    echo "iptables service not found..."
-
-elif [ -a /etc/sysconfig/iptables ] && [ $? -ne 0 ]; then
-    echo "iptables stopping failed..."
+#Checking for iptables service:
+if [ -a /etc/init.d/iptables ]; then
+    /etc/init.d/iptables stop &
+    if [ $? -eq o ]; then
+	echo "iptables stopped successfully"
+    else
+	echo "iptables stopping failed"
+    fi
+else 
+    echo "iptables service not found"
 fi
+echo
 
-
-/etc/init.d/httpd restart &
-if [ $? -eq 0 ]; then
-    echo "httpd was restarted successfully..."
+#checking for httpd service:
+if [ -a /etc/init.d/httpd ]; then
+    /etc/init.d/httpd restart &
+    if [ $? -eq 0 ]; then
+	echo "httpd restarted successfully"
+    else
+	echo "httpd restarting failed"
+    fi
 else
-    echo "httpd restarting failed..."
+    echo "httpd not found"
 fi
+echo
