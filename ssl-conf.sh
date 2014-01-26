@@ -35,11 +35,12 @@ echo
 
 echo ServerName localhost >> $HTTPPATH
 
-#Editing SSL configurations
+
 sed -i 's|SSLCertificateFile /etc/pki/tls/certs/localhost.crt|SSLCertificateFile /etc/pki/tls/certs/ca.crt|' $SSLPATH &
 sed -i 's|SSLCertificateKeyFile /etc/pki/tls/private/localhost.key|SSLCertificateKeyFile /etc/pki/tls/private/ca.key|' $SSLPATH &
+echo "SSL configurations finished"
+echo
 
-#Checking for iptables service:
 if [ -a /etc/init.d/iptables ]; then
     /etc/init.d/iptables stop &
     if [ $? -eq o ]; then
@@ -52,7 +53,6 @@ else
 fi
 echo
 
-#checking for httpd service:
 if [ -a /etc/init.d/httpd ]; then
     /etc/init.d/httpd restart &
     if [ $? -eq 0 ]; then
