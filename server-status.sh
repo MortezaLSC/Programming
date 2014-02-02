@@ -39,6 +39,6 @@ total=`wc -l /tmp/whole.txt | awk '{sum += $1} END {print sum}'`
 ok=`wc -l /tmp/res-ok.txt | awk '{sum += $1} END {print sum}'`
 failed=`wc -l /tmp/res-failed.txt | awk '{sum += $1} END {print sum}'`
 
-echo Number of all servers: $total
-echo You have $ok servers UP
-echo You have $failed servers DOWN
+echo "TOTAL: $total"
+echo "UP:    $ok"
+echo "DOWN:  $failed"
