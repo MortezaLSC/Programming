@@ -2,7 +2,7 @@
 #This script is written by "MortezaLSC" at Sunday, 2 February 2014 at 3:16 PM
 
 if [ $# -ne 1 ]; then
-    echo "USAGE: ./ping2 <ip-list>"
+    echo "USAGE: ./server-status.sh <ip-list>"
     exit 1
 fi
 
