@@ -23,7 +23,6 @@ echo "|   IP ADDRESS   |               |   STATUS   |"
 echo " ================                 ============ "
 
 output=""
-
 while read ip; do
     ping $ip -s 1 -c 1 -W 1 1>/dev/null 2>&1
     if [ $? -eq 0 ]; then
