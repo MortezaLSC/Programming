@@ -1,6 +1,11 @@
 #!/bin/bash 
 #This script is written by "MortezaLSC" at Sunday, 2 February 2014 at 3:16 PM
 
+if [ $# -ne 1 ]; then
+    echo "USAGE: ./ping2 <ip-list>"
+    exit 1
+fi
+
 rm -f /tmp/whole.txt      1>/dev/null 2>/dev/null
 rm -f /tmp/res-ok.txt     1>/dev/null 2>/dev/null
 rm -f /tmp/res-failed.txt 1>/dev/null 2>/dev/null
@@ -28,9 +33,7 @@ while read ip; do
 	output="$output `echo "\n$ip -------------------- DOWN"`"
         echo $ip >> /tmp/res-failed.txt
     fi
-done <<____HERE
-
-____HERE
+done < $1
 
 echo -e "$output" | column -t
 
