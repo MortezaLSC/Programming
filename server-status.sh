@@ -1,5 +1,5 @@
 #!/bin/bash 
-#This script is written by "MortezaLSC" at Sunday, 2 February 2014 at 3:16 PM
+#This script is written by "MortezaLSC" on Sunday, 2 February 2014 at 3:16 PM
 
 if [ $# -ne 1 ]; then
     echo "USAGE: ./server-status.sh <ip-list>"
