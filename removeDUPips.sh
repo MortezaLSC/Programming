@@ -12,4 +12,4 @@
 #uniq file.txt > out.txt
 
 ##awk
-#awk '!a[$0]++' input.txt > out.txt
+#awk '!a[$0]++' input.txt > output.txt
