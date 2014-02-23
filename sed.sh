@@ -18,3 +18,19 @@ perl -p -i -e 's/ServerAdmin/ServerAdmin secret@secret.com/g' your_file_name
 
 #Removing all blank lines:
 sed -i '/^$/d' input.txt
+
+
+#Remove strings at the end of file:
+cat input.txt
+dfsd-sdf-1234fgfg
+eswr-ewref-23243fsdf
+hgh-jh45h-78j78
+hgh-jh45h-sdf7878
+hgh-jh45h-7878j
+
+sed -r 's/[^0-9]+$//' input.txt
+dfsd-sdf-1234
+eswr-ewref-23243
+hgh-jh45h-78j78
+hgh-jh45h-sdf7878
+hgh-jh45h-7878
