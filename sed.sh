@@ -14,3 +14,7 @@ sed -i 's/^ServerAdmin .*$/ServerAdmin secret@secret.com/' in-filename
 
 using perl:
 perl -p -i -e 's/ServerAdmin/ServerAdmin secret@secret.com/g' your_file_name
+
+
+#Removing all blank lines:
+sed -i '/^$/d' input.txt
