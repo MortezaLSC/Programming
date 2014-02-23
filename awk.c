@@ -531,3 +531,15 @@ awk '!a[$0]++' input.txt > output.txt
 Sorting a file:
 awk '{ print $1 |  "sort" }' input.txt > output.txt
 
+
+#Remove strings at the end of file:
+cat input.txt
+dfsd-sdf-1234fgfg
+eswr-ewref-23243fsdf
+hgh-jh45h-78j78
+hgh-jh45h-sdf7878
+hgh-jh45h-7878j
+
+awk '{sub(/[[:alpha:]]$/,"")}8' input.txt
+OR
+awk '{sub(/[^0-9]$/,"")}8' input.txt
