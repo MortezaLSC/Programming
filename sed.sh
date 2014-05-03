@@ -34,3 +34,13 @@ eswr-ewref-23243
 hgh-jh45h-78j78
 hgh-jh45h-sdf7878
 hgh-jh45h-7878
+
+#Adding word at the first of all lines:
+sed 's/^/newBeginning/' filename
+
+#Removing word from all lines:
+sed 's/\<word\>//g' input
+OR
+sed -e 's/\<regex-for-word\>//g' input > output
+ EX:
+   echo 'This is a foo test' | sed -e 's/\<foo\>//g'
